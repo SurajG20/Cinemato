@@ -1,0 +1,77 @@
+@import '../../mixins.scss';
+.footer {
+  background-color: var(--black3);
+  padding: 50px 0;
+  color: white;
+  position: relative;
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footerTitle {
+    font-size: 22px;
+    color: #4286f4;
+    @include md {
+      font-size: 30px;
+    }
+  }
+  .infoText {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    text-align: center;
+    max-width: 800px;
+    @include md {
+      font-size: 18px;
+    }
+  }
+  .menuItems {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    @include md {
+      gap: 30px;
+    }
+    .menuItem {
+      transition: all ease 0.3s;
+      cursor: pointer;
+      font-size: 13px;
+      @include md {
+        font-size: 16px;
+      }
+      &:hover {
+        color: #4286f4;
+      }
+    }
+  }
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      .footerLink {
+        text-decoration: none;
+        color: inherit;
+      }
+      &:hover {
+        box-shadow: 0 0 0.625em #4286f4;
+        color: v#4286f4;
+      }
+    }
+  }
+}
